@@ -17,8 +17,7 @@ public class EmailController {
 
     @PostMapping
     public ResponseEntity enviar(@RequestBody @Valid EnvioEmailDTO dto){
-        service.enviarEmail(dto);
-        return null;
+        return service.enviarEmail(dto);
     }
 
 }

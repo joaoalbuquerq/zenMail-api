@@ -1,4 +1,7 @@
 package com.zenmailapi.repository;
 
-public interface EmailRepository {
+import com.zenmailapi.model.Email;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface EmailRepository extends JpaRepository<Email, Long> {
 }
