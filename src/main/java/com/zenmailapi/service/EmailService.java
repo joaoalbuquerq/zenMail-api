@@ -34,7 +34,7 @@ public class EmailService {
 
             var email = new Email(dto);
             repository.save(email);
-            return ResponseEntity.ok().build();
+            return ResponseEntity.ok("Email enviado com sucesso");
         }catch(MailException exception){
             System.out.println("Erro ao enviar email" + exception.getMessage());
             return ResponseEntity.badRequest().build();
